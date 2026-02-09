@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Define your custom colors here */
+  --color-brand-black: #0a0a0a;
+  --color-brand-dark: #1c1c1c;
+  --color-brand-gray: #808080;
+  --color-brand-light: #e5e5e5;
+  --color-brand-white: #ffffff;
+
+  /* Define your custom fonts */
+  --font-display: "Oswald", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
