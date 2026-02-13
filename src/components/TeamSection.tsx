@@ -49,7 +49,7 @@ const TeamSection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Label */}
         <div className="flex justify-center mb-24">
-          <span className="text-[10px] md:text-xs font-mono text-neutral-500 uppercase tracking-[0.3em]">
+          <span className="text-sm md:text-base font-mono text-neutral-500 uppercase tracking-[0.3em]">
             THE TEAM
           </span>
         </div>
