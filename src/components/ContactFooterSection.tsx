@@ -27,7 +27,7 @@ const ContactFooterSection = () => {
           <div className="flex flex-col">
             <form className="flex flex-col gap-12" onSubmit={(e) => e.preventDefault()}>
               <div className="flex flex-col gap-2 group">
-                <label className="text-[10px] font-mono text-neutral-500 uppercase tracking-widest">Name</label>
+                <label className="text-sm md:text-base font-mono text-neutral-500 uppercase tracking-widest">Name</label>
                 <input 
                   type="text" 
                   placeholder="John Doe"
