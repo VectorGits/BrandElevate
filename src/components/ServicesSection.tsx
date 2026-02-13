@@ -9,17 +9,27 @@ const SERVICES = [
   },
   {
     id: "02",
-    title: "Visual Identity",
+    title: "Content Creation",
     description: "More than just a logo. We craft comprehensive design systems including typography, color palettes, and visual assets that create a cohesive and memorable brand experience across every touchpoint. Every pixel is purposeful, every color is calculated.",
   },
   {
     id: "03",
-    title: "Web Development",
+    title: "Social Media Mgmt",
     description: "Performance-driven digital experiences. We build lightning-fast, scalable websites using modern technologies like React and Tailwind, ensuring your digital presence is as powerful as your brand. Clean code, seamless animations, and intuitive user interfaces.",
   },
   {
     id: "04",
     title: "Digital Marketing",
+    description: "Growth-focused campaigns that convert. From SEO to social media strategy, we amplify your message and connect you with your ideal audience using data-backed methodologies. We turn passive visitors into loyal advocates.",
+  },
+  {
+    id: "05",
+    title: "Graphics & Creative Design",
+    description: "Growth-focused campaigns that convert. From SEO to social media strategy, we amplify your message and connect you with your ideal audience using data-backed methodologies. We turn passive visitors into loyal advocates.",
+  },
+  {
+    id: "06",
+    title: "Business & Brand Consulting",
     description: "Growth-focused campaigns that convert. From SEO to social media strategy, we amplify your message and connect you with your ideal audience using data-backed methodologies. We turn passive visitors into loyal advocates.",
   },
 ];
@@ -62,7 +72,7 @@ const MobileServiceCard = ({
     <div 
       className="sticky border-t border-white/20 overflow-hidden bg-black flex flex-col"
       style={{ 
-        top: `${index * 60}px`, 
+        top: `${70 + index * 60}px`, 
         minHeight: "80vh",
       }}
     >
@@ -120,7 +130,7 @@ const DesktopLayout = () => {
                 }`}>
                   {service.id}
                 </span>
-                <h3 className="text-5xl lg:text-6xl font-bold font-['Syne'] uppercase tracking-tight">
+                <h3 className="text-3xl lg:text-4xl font-bold font-['Syne'] uppercase tracking-tight">
                   {service.title}
                 </h3>
               </div>
