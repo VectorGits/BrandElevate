@@ -14,3 +14,11 @@
   --font-display: "Oswald", sans-serif;
   --font-body: "Inter", sans-serif;
 }
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+}
