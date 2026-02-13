@@ -36,7 +36,7 @@ const TestimonialsSection = () => {
     <section className="bg-[#0a0a0a] min-h-[80vh] flex flex-col items-center justify-center relative px-6 py-24 overflow-hidden">
       {/* Section Label */}
       <div className="absolute top-12 left-1/2 -translate-x-1/2">
-        <span className="text-[10px] md:text-xs font-mono text-neutral-500 uppercase tracking-[0.3em]">
+        <span className="text-sm md:text-base font-mono text-neutral-500 uppercase tracking-[0.3em]">
           WHAT THEY SAY
         </span>
       </div>
