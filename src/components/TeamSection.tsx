@@ -3,22 +3,22 @@ import { motion, type Variants } from "framer-motion";
 const TEAM = [
   {
     id: 1,
-    name: "Alexander Vance",
-    role: "Creative Director",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800",
+    name: "John Evaristus",
+    role: "Punani Searcher",
+    image: "/John-headshot.webp",
   },
   {
     id: 2,
-    name: "Elena Rodriguez",
-    role: "Head of Design",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=800",
+    name: "Joju Evaristus",
+    role: "Punani",
+    image: "/Joju-headshot.webp",
   },
-  {
-    id: 3,
-    name: "Julian Thorne",
-    role: "Lead Developer",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=800",
-  },
+  // {
+  //   id: 3,
+  //   name: "Julian Thorne",
+  //   role: "Lead Developer",
+  //   image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=800",
+  // },
 ];
 
 const containerVariants: Variants = {
@@ -45,7 +45,7 @@ const itemVariants: Variants = {
 
 const TeamSection = () => {
   return (
-    <section className="bg-[#0a0a0a] py-32 px-6 md:px-16 overflow-hidden">
+    <section id="team" className="bg-brand-black py-32 px-6 md:px-16 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Section Label */}
         <div className="flex justify-center mb-24">
@@ -65,7 +65,7 @@ const TeamSection = () => {
           {TEAM.map((member) => (
             <motion.div key={member.id} variants={itemVariants} className="group">
               {/* Image Container */}
-              <div className="relative aspect-[3/4] overflow-hidden bg-neutral-900 mb-8 rounded-sm">
+              <div className="relative aspect-3/4 overflow-hidden bg-neutral-900 mb-8 rounded-sm">
                 <motion.img
                   src={member.image}
                   alt={member.name}
