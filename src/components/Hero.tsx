@@ -296,7 +296,7 @@ const Hero = () => {
       <div ref={buttonRef} className="relative z-10 opacity-0 px-4">
         <button
           onClick={() => {
-            const waitlistElement = document.getElementById("waitlist");
+            const waitlistElement = document.getElementById("contact");
             if (waitlistElement) {
               waitlistElement.scrollIntoView({
                 behavior: "smooth",
