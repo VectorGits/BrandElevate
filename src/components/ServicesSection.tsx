@@ -9,12 +9,12 @@ const SERVICES = [
   },
   {
     id: "02",
-    title: "Visual Identity",
+    title: "Content Creation",
     description: "More than just a logo. We craft comprehensive design systems including typography, color palettes, and visual assets that create a cohesive and memorable brand experience across every touchpoint. Every pixel is purposeful, every color is calculated.",
   },
   {
     id: "03",
-    title: "Web Development",
+    title: "Social Media Mgmt",
     description: "Performance-driven digital experiences. We build lightning-fast, scalable websites using modern technologies like React and Tailwind, ensuring your digital presence is as powerful as your brand. Clean code, seamless animations, and intuitive user interfaces.",
   },
   {
@@ -22,16 +22,26 @@ const SERVICES = [
     title: "Digital Marketing",
     description: "Growth-focused campaigns that convert. From SEO to social media strategy, we amplify your message and connect you with your ideal audience using data-backed methodologies. We turn passive visitors into loyal advocates.",
   },
+  {
+    id: "05",
+    title: "Graphics & Creative Design",
+    description: "Growth-focused campaigns that convert. From SEO to social media strategy, we amplify your message and connect you with your ideal audience using data-backed methodologies. We turn passive visitors into loyal advocates.",
+  },
+  {
+    id: "06",
+    title: "Business & Brand Consulting",
+    description: "Growth-focused campaigns that convert. From SEO to social media strategy, we amplify your message and connect you with your ideal audience using data-backed methodologies. We turn passive visitors into loyal advocates.",
+  },
 ];
 
 const ServicesSection = () => {
   return (
-    <section className="bg-black text-white relative">
+    <section id="expertise" className="bg-black text-white relative scroll-mt-24 md:scroll-mt-32">
       {/* Mobile Layout: Sticky Stack */}
       <div className="md:hidden">
-        <div className="py-16 px-4">
+        <div className="sticky top-20 bg-black z-20 py-12 px-6 border-b border-white/20">
           <h2 className="text-sm font-mono text-neutral-500 uppercase tracking-widest mb-4">Our Expertise</h2>
-          <p className="text-3xl font-bold max-w-xl leading-tight mb-12">
+          <p className="text-3xl font-bold max-w-xl leading-tight">
             Comprehensive solutions for ambitious brands.
           </p>
         </div>
@@ -60,13 +70,14 @@ const MobileServiceCard = ({
 }) => {
   return (
     <div 
-      className="sticky border-t border-white/20 overflow-hidden bg-black flex flex-col"
+      id={`expertise-${service.id}`}
+      className="sticky border-t border-white/20 overflow-hidden bg-black flex flex-col z-10"
       style={{ 
-        top: `${index * 60}px`, 
+        top: `${280 + index * 60}px`, 
         minHeight: "80vh",
       }}
     >
-      <div className="px-4 py-4 h-[60px] flex items-center justify-between bg-neutral-900 z-10">
+      <div className="px-4 py-4 h-15 flex items-center justify-between bg-neutral-900 z-10">
         <div className="flex items-center gap-4">
           <span className="font-mono text-neutral-500">{service.id}</span>
           <h3 className="text-xl font-bold font-['Syne'] uppercase tracking-wide">
@@ -104,7 +115,7 @@ const DesktopLayout = () => {
                 activeId === service.id ? "opacity-100 translate-x-4" : "opacity-30 hover:opacity-60"
               }`}
               onClick={() => {
-                const element = document.getElementById(`service-${service.id}`);
+                const element = document.getElementById(`expertise-${service.id}`);
                 if (element) {
                   const offset = element.offsetTop;
                   window.scrollTo({
@@ -120,7 +131,7 @@ const DesktopLayout = () => {
                 }`}>
                   {service.id}
                 </span>
-                <h3 className="text-5xl lg:text-6xl font-bold font-['Syne'] uppercase tracking-tight">
+                <h3 className="text-3xl lg:text-4xl font-bold font-['Syne'] uppercase tracking-tight">
                   {service.title}
                 </h3>
               </div>
@@ -163,7 +174,7 @@ const DesktopServiceContent = ({
 
   return (
     <div 
-      id={`service-${service.id}`}
+      id={`expertise-${service.id}`}
       ref={ref}
       className="min-h-screen flex items-center px-16 py-24"
     >

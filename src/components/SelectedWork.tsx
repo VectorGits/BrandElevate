@@ -34,12 +34,12 @@ const SelectedWork = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-75%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-45%"]);
 
   return (
-    <section className="bg-black text-white py-24 md:py-0">
+    <section id="portfolio" className="bg-black text-white py-24 md:py-0">
       <div className="px-6 mb-12 md:hidden">
-        <h2 className="text-sm font-mono text-neutral-500 uppercase tracking-widest mb-4">
+        <h2 className="text-sm md:text-base font-mono text-neutral-500 uppercase tracking-widest mb-4">
           Selected Work
         </h2>
       </div>
@@ -48,7 +48,7 @@ const SelectedWork = () => {
       <div className="md:hidden flex flex-col gap-12 px-6">
         {PROJECTS.map((project) => (
           <div key={project.id} className="group flex flex-col gap-4">
-            <div className="aspect-[4/5] overflow-hidden bg-neutral-900 border border-white/10 rounded-lg">
+            <div className="aspect-4/5 overflow-hidden bg-neutral-900 border border-white/10 rounded-lg">
               <img
                 src={project.image}
                 alt={project.title}
@@ -65,15 +65,15 @@ const SelectedWork = () => {
       </div>
 
       {/* Desktop Layout - Pinned Horizontal Scroll */}
-      <div ref={targetRef} className="hidden md:block relative h-[300vh]">
+      <div ref={targetRef} className="hidden md:block relative h-[250vh]">
         <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden">
-          <div className="px-16 mb-8 absolute top-24">
-            <h2 className="text-sm font-mono text-neutral-500 uppercase tracking-widest">
+          <div className="px-16 mb-8 absolute top-24 md:top-32 z-30 pointer-events-none">
+            <h2 className="text-sm md:text-base font-mono text-neutral-500 uppercase tracking-widest">
               Selected Work
             </h2>
           </div>
           
-          <motion.div style={{ x }} className="flex gap-12 px-16 w-fit">
+          <motion.div style={{ x }} className="relative z-10 flex gap-12 px-16 w-fit">
             {PROJECTS.map((project) => (
               <div
                 key={project.id}
