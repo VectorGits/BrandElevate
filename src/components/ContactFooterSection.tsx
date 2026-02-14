@@ -2,7 +2,7 @@
 
 const ContactFooterSection = () => {
   return (
-    <footer id="contact" className="bg-[#0a0a0a] text-white pt-32 pb-12 px-6 md:px-16 overflow-hidden">
+    <footer id="contact" className="bg-brand-black text-white pt-32 pb-12 px-6 md:px-16 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Contact Area */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-32">
@@ -18,7 +18,7 @@ const ContactFooterSection = () => {
                 className="text-2xl md:text-3xl font-light text-white/90 hover:text-white transition-all duration-300 relative group"
               >
                 hello@brandelevate.com
-                <span className="absolute -bottom-2 left-0 w-full h-[1px] bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                <span className="absolute -bottom-2 left-0 w-full h-px bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
               </a>
             </div>
           </div>
