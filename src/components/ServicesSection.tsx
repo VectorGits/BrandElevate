@@ -36,7 +36,7 @@ const SERVICES = [
 
 const ServicesSection = () => {
   return (
-    <section className="bg-black text-white relative">
+    <section id="expertise" className="bg-black text-white relative scroll-mt-24 md:scroll-mt-32">
       {/* Mobile Layout: Sticky Stack */}
       <div className="md:hidden">
         <div className="sticky top-20 bg-black z-20 py-12 px-6 border-b border-white/20">
@@ -70,6 +70,7 @@ const MobileServiceCard = ({
 }) => {
   return (
     <div 
+      id={`expertise-${service.id}`}
       className="sticky border-t border-white/20 overflow-hidden bg-black flex flex-col z-10"
       style={{ 
         top: `${280 + index * 60}px`, 
@@ -114,7 +115,7 @@ const DesktopLayout = () => {
                 activeId === service.id ? "opacity-100 translate-x-4" : "opacity-30 hover:opacity-60"
               }`}
               onClick={() => {
-                const element = document.getElementById(`service-${service.id}`);
+                const element = document.getElementById(`expertise-${service.id}`);
                 if (element) {
                   const offset = element.offsetTop;
                   window.scrollTo({
@@ -173,7 +174,7 @@ const DesktopServiceContent = ({
 
   return (
     <div 
-      id={`service-${service.id}`}
+      id={`expertise-${service.id}`}
       ref={ref}
       className="min-h-screen flex items-center px-16 py-24"
     >

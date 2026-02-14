@@ -59,7 +59,8 @@ const InfiniteMarquee = () => {
   );
 
   return (
-    <div 
+    <div
+      id="about" 
       ref={containerRef}
       className="w-full py-6 border-y border-white/5 bg-black/50 backdrop-blur-sm overflow-hidden z-20 relative"
     >

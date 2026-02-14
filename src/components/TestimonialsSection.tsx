@@ -33,7 +33,7 @@ const TestimonialsSection = () => {
   }, []);
 
   return (
-    <section className="bg-[#0a0a0a] min-h-[80vh] flex flex-col items-center justify-center relative px-6 py-24 overflow-hidden">
+    <section className="bg-brand-black min-h-[80vh] flex flex-col items-center justify-center relative px-6 py-24 overflow-hidden">
       {/* Section Label */}
       <div className="absolute top-12 left-1/2 -translate-x-1/2">
         <span className="text-sm md:text-base font-mono text-neutral-500 uppercase tracking-[0.3em]">
@@ -42,7 +42,7 @@ const TestimonialsSection = () => {
       </div>
 
       {/* Main Quote Content */}
-      <div className="max-w-5xl w-full text-center relative h-[400px] flex items-center justify-center">
+      <div className="max-w-5xl w-full text-center relative h-100 flex items-center justify-center">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -78,7 +78,7 @@ const TestimonialsSection = () => {
             aria-label={`Go to testimonial ${index + 1}`}
           >
             <div 
-              className={`w-full h-[2px] transition-all duration-500 ${
+              className={`w-full h-0.5 transition-all duration-500 ${
                 index === currentIndex ? "bg-white" : "bg-neutral-800 group-hover:bg-neutral-600"
               }`} 
             />
@@ -88,7 +88,7 @@ const TestimonialsSection = () => {
 
       {/* Background Subtle Accent */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-radial from-white/[0.03] to-transparent" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-radial from-white/3 to-transparent" />
       </div>
     </section>
   );
