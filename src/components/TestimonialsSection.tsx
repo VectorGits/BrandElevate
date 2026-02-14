@@ -4,21 +4,24 @@ import { motion, AnimatePresence } from "framer-motion";
 const TESTIMONIALS = [
   {
     id: 1,
-    quote: "Their approach to minimalist design isn't just aesthetic; it's a fundamental shift in how we communicate our value to clients.",
-    author: "Sarah Jenkins",
-    role: "CEO, Nexus Digital",
+    quote: "BrandElevate didn’t just create content for us — they captured the vibe of Blackcafe perfectly. From visuals to strategy, everything feels intentional, engaging, and true to our brand.",
+    author: "David Jenkins",
+    role: "CEO, Blackcafe",
+    image: "/Black-Cafe.jpg",
   },
   {
     id: 2,
-    quote: "The technical precision and attention to detail in the final product exceeded every expectation. Truly world-class development.",
-    author: "Marcus Thorne",
-    role: "CTO, Mono Branding",
+    quote: "BrandElevate transformed Ken Autos. Their strategic creativity gave us a fresh identity that truly connects with our audience.",
+    author: "Emilia Thorne",
+    role: "CTO, Ken Autos",
+    image: "/Ken-Autos.jpg",
   },
   {
     id: 3,
     quote: "They have a rare ability to strip away the noise and find the core essence of a brand. The results speak for themselves.",
     author: "Elena Rossi",
     role: "Creative Director, Ethereal UI",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=256",
   },
 ];
 
@@ -56,13 +59,22 @@ const TestimonialsSection = () => {
               "{TESTIMONIALS[currentIndex].quote}"
             </h2>
             
-            <div className="flex flex-col gap-1 mt-4">
-              <span className="text-white font-bold text-lg uppercase tracking-wider">
-                {TESTIMONIALS[currentIndex].author}
-              </span>
-              <span className="text-neutral-500 text-sm font-mono uppercase tracking-widest">
-                {TESTIMONIALS[currentIndex].role}
-              </span>
+            <div className="flex items-center gap-4 mt-4">
+              <div className="w-16 h-16 rounded-full overflow-hidden bg-neutral-900 border border-white/10 shrink-0">
+                <img
+                  src={TESTIMONIALS[currentIndex].image}
+                  alt={TESTIMONIALS[currentIndex].author}
+                  className="w-full h-full object-cover grayscale"
+                />
+              </div>
+              <div className="flex flex-col gap-1 text-left">
+                <span className="text-white font-bold text-lg uppercase tracking-wider">
+                  {TESTIMONIALS[currentIndex].author}
+                </span>
+                <span className="text-neutral-500 text-sm font-mono uppercase tracking-widest">
+                  {TESTIMONIALS[currentIndex].role}
+                </span>
+              </div>
             </div>
           </motion.div>
         </AnimatePresence>
