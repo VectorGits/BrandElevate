@@ -7,16 +7,16 @@ const Logo = () => (
   <div className="flex items-center gap-2 font-bold text-xl tracking-tighter text-white select-none">
     <div className="w-8 h-8 rounded-full flex items-center justify-center overflow-hidden">
       <img 
-          src="./Hubble-logo-sm.png" 
-          alt="Miva Hubble Logo" 
+          src="./BRANDELEVATE-logo-icon.png" 
+          alt="Brand Elevate Logo" 
           className="w-full h-full object-cover invert opacity-90"
       />
     </div>
     <span className="hidden md:block">
       <img 
-          src="./Hubble-logo-text-sm.png" 
-          alt="Miva Hubble Logo" 
-          className="h-4 object-contain invert opacity-90"
+          src="./BRANDELEVATE-logo-text.png" 
+          alt="Brand Elevate Logo" 
+          className="h-6 object-contain invert opacity-90"
       />
     </span>
   </div>
@@ -35,9 +35,10 @@ const Navbar = () => {
 
   const links = [
     { title: "Home", path: "#" },
-    { title: "Features", path: "#features" },
     { title: "About", path: "#about" },
-    { title: "Contact", path: "#Contact", isNew: true },
+    { title: "Expertise", path: "#expertise", isNew: true },
+    { title: "Portfolio", path: "#portfolio" },
+    { title: "Team", path: "#team" },
   ];
 
   const containerVars = {
@@ -104,7 +105,7 @@ const Navbar = () => {
             
             {/* CTA Button */}
             <motion.a
-              href="#Contact"
+              href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="hidden lg:flex items-center gap-2 bg-white text-black px-8 py-3 rounded-full font-semibold text-sm hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-shadow"
@@ -164,11 +165,11 @@ const Navbar = () => {
               
                <motion.div variants={itemVars} className="mt-8 pt-6 border-t border-white/10">
                  <a 
-                   href="#waitlist"
+                   href="#contact"
                    onClick={() => setIsOpen(false)}
                    className="flex items-center justify-center w-full py-4 rounded-xl bg-white text-black font-semibold hover:scale-[1.02] transition-transform"
                  >
-                   Join Waitlist
+                   Contact
                  </a>
               </motion.div>
             </motion.div>
