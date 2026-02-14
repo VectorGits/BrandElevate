@@ -39,9 +39,9 @@ const ServicesSection = () => {
     <section className="bg-black text-white relative">
       {/* Mobile Layout: Sticky Stack */}
       <div className="md:hidden">
-        <div className="py-16 px-4">
+        <div className="sticky top-20 bg-black z-20 py-12 px-6 border-b border-white/20">
           <h2 className="text-sm font-mono text-neutral-500 uppercase tracking-widest mb-4">Our Expertise</h2>
-          <p className="text-3xl font-bold max-w-xl leading-tight mb-12">
+          <p className="text-3xl font-bold max-w-xl leading-tight">
             Comprehensive solutions for ambitious brands.
           </p>
         </div>
@@ -70,13 +70,13 @@ const MobileServiceCard = ({
 }) => {
   return (
     <div 
-      className="sticky border-t border-white/20 overflow-hidden bg-black flex flex-col"
+      className="sticky border-t border-white/20 overflow-hidden bg-black flex flex-col z-10"
       style={{ 
-        top: `${70 + index * 60}px`, 
+        top: `${280 + index * 60}px`, 
         minHeight: "80vh",
       }}
     >
-      <div className="px-4 py-4 h-[60px] flex items-center justify-between bg-neutral-900 z-10">
+      <div className="px-4 py-4 h-15 flex items-center justify-between bg-neutral-900 z-10">
         <div className="flex items-center gap-4">
           <span className="font-mono text-neutral-500">{service.id}</span>
           <h3 className="text-xl font-bold font-['Syne'] uppercase tracking-wide">
