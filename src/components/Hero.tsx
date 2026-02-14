@@ -224,7 +224,7 @@ const Hero = () => {
           Elevating Your
         </SplitWords>
         <div className="block overflow-hidden pb-4">
-          <span className="word-anim inline-block bg-clip-text text-6xl md:text-9xl text-transparent bg-gradient-to-b from-white to-neutral-400">
+          <span className="word-anim inline-block bg-clip-text text-6xl md:text-9xl text-transparent bg-linear-to-b from-white to-neutral-400">
             Business.
           </span>
         </div>
@@ -233,7 +233,7 @@ const Hero = () => {
       {/* Subtext */}
       <div className="relative z-10 flex flex-col items-center text-center max-w-2xl mb-20 px-4 space-y-8">
         <div className="subtext-anim opacity-0 inline-flex items-center px-4 py-1.5 rounded-full border border-white/10 text-neutral-400 text-sm font-medium">
-          Anonymity on your terms
+          ◉ Brand Elevate ◉
         </div>
         <p className="subtext-anim opacity-0 text-neutral-400 text-lg leading-relaxed max-w-xl mx-auto">
           We Transform Ideas Into Impactful Brands and Memorable Digital Experiences.
@@ -312,7 +312,7 @@ const Hero = () => {
       </div>
 
       {/* Bottom Fade */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#0A0A0A] to-transparent z-20 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-linear-to-t from-[#0A0A0A] to-transparent z-20 pointer-events-none" />
     </section>
   );
 };
